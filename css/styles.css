@@ -1,56 +1,158 @@
-/* Reset some default browser styles */
-body, h1, h2, p {
+/* Apply predictable sizing to every element */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset common browser spacing */
+body,
+h1,
+h2,
+p {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+/* Header */
+header > div {
+    background-color: #f1f1f1 !important;
+    padding: 40px 24px !important;
+    text-align: center !important;
 }
 
+header img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    object-fit: cover;
+}
+
+header h1 {
+    margin: 0 0 20px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+header hr {
+    margin: 0 0 12px;
+    border: 0;
+    border-top: 1px solid #c8c8c8;
+}
+
+/* Navigation */
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 12px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
+    font-size: 16px;
     text-decoration: underline;
 }
 
+nav a:hover {
+    text-decoration-thickness: 2px;
+}
+
+/* Main content */
 main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: white;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+main > div {
+    width: 100%;
+    max-width: 700px !important;
+    margin: 30px auto !important;
+    padding: 15px !important;
+    line-height: 1.5 !important;
 }
 
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 28px;
+    scroll-margin-top: 16px;
 }
 
 section h2 {
-    margin-bottom: 1rem;
+    margin: 0 0 16px;
+    font-size: 24px;
+    line-height: 1.25;
 }
 
+/* Publication entries */
+#publications p {
+    margin: 0 0 28px;
+    overflow-wrap: break-word;
+}
+
+#publications p:last-child {
+    margin-bottom: 0;
+}
+
+#publications a {
+    line-height: 1.5;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
+    background-color: #f1f1f1 !important;
+    padding: 40px 24px !important;
+    text-align: center !important;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    header > div {
+        padding: 28px 16px !important;
+    }
+
+    header img {
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    main > div {
+        margin: 16px auto !important;
+        padding: 16px !important;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    #publications p {
+        margin-bottom: 24px;
+        line-height: 1.6;
+    }
+
+    footer {
+        padding: 28px 16px !important;
+    }
 }
