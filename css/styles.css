@@ -35,10 +35,12 @@ header > div {
 
 header img {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 24px;
     object-fit: cover;
+    object-position: 62% center;
+    border-radius: 50%;
 }
 
 header h1 {
